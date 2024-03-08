@@ -1,11 +1,14 @@
 package org.example.dao;
 
-package dao;
 
-import entities.Utilisateur;
-import utils.PersistenceManager;
+
+
+import org.example.entities.Utilisateur;
+import org.example.utils.PersistenceManager;
+
 import javax.persistence.EntityManager;
 import java.util.List;
+
 
 public class UtilisateurDao {
 

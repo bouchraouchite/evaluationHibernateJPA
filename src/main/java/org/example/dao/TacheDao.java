@@ -1,10 +1,10 @@
 package org.example.dao;
 
-package dao;
 
-import entities.Projet;
-import entities.Tache;
-import utils.PersistenceManager;
+import org.example.entities.Projet;
+import org.example.entities.Tache;
+import org.example.utils.PersistenceManager;
+
 import javax.persistence.EntityManager;
 import java.util.List;
 

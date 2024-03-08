@@ -1,12 +1,13 @@
 package org.example;
-package main;
-import dao.ProjetDao;
-import dao.TacheDao;
-import dao.UtilisateurDao;
-import entities.Projet;
-import entities.Tache;
-import entities.Utilisateur;
-import utils.PersistenceManager;
+
+import org.example.dao.ProjetDao;
+import org.example.dao.TacheDao;
+import org.example.dao.UtilisateurDao;
+import org.example.entities.Projet;
+import org.example.entities.Tache;
+import org.example.entities.Utilisateur;
+import org.example.utils.PersistenceManager;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -35,7 +36,7 @@ public class Main {
 
        
         System.out.println("Projets trouvés : ");
-        for (Projet p : projetDao.rechercher()) {
+        for (Object p : projetDao.rechercher()) {
             System.out.println(p.getTitre() + " - " + p.getDescription());
         }
 

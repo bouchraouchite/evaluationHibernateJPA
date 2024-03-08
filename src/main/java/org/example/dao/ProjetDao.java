@@ -1,16 +1,14 @@
 package org.example.dao;
 
-package dao;
+import org.example.utils.PersistenceManager;
 
-import entities.Projet;
-import utils.PersistenceManager;
 import javax.persistence.EntityManager;
 import java.util.List;
 
-public class ProjetDao {
+public class ProjetDao<Projet> {
 
     public void persisterProjet(Projet projet) {
-        EntityManager em = PersistenceManager.getEntityManager();
+        EntityManager em = projet.getEntityManager();
         em.getTransaction().begin();
         em.persist(projet);
         em.getTransaction().commit();

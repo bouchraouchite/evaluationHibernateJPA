@@ -1,7 +1,8 @@
 package org.example.entities;
-package entities;
+
 
 import javax.persistence.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,7 +10,7 @@ import java.util.Set;
 public class Projet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String titre;
     private String description;
 
@@ -26,6 +27,10 @@ public class Projet {
         this.description = description;
         this.utilisateur = utilisateur;
         this.taches = taches;
+    }
+
+    public Projet() {
+
     }
 
     public Long getId() {
