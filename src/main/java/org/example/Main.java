@@ -8,6 +8,8 @@ import org.example.entities.Tache;
 import org.example.entities.Utilisateur;
 import org.example.utils.PersistenceManager;
 
+import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -36,7 +38,8 @@ public class Main {
 
        
         System.out.println("Projets trouvés : ");
-        for (Object p : projetDao.rechercher()) {
+        List<Projet> projets=projetDao.rechercher();
+        for (Projet p : projets) {
             System.out.println(p.getTitre() + " - " + p.getDescription());
         }
 

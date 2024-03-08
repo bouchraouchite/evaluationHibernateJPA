@@ -16,6 +16,9 @@ public class Utilisateur {
     @OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Projet> projets = new HashSet<>();
 
+    public Utilisateur() {
+    }
+
     public Utilisateur(Long id, String nom, String email, Set<Projet> projets) {
         this.id = id;
         this.nom = nom;

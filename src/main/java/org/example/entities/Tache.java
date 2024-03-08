@@ -10,6 +10,9 @@ public class Tache {
     private String titre;
     private String description;
 
+    public Tache() {
+    }
+
     @ManyToOne
     @JoinColumn(name = "projet_id")
     private Projet projet;
