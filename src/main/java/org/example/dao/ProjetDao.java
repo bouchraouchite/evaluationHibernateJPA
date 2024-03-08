@@ -1,7 +1,6 @@
 package org.example.dao;
 
 import org.example.utils.PersistenceManager;
-import org.hibernate.Transaction;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -35,7 +34,7 @@ public class ProjetDao<Projet> {
             transaction = em.getTransaction();
             transaction.begin();
             String hql="SELECT p FROM Projet p ORDER BY p.id ASC";
-             Query query=em.createQuery(hql,Projet.class);
+             Query query=em.createQuery(hql,ProjetDao.class);
             List<Projet> result =query.getResultList();
             transaction.commit();
             return result;
